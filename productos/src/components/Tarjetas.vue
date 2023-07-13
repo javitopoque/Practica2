@@ -10,7 +10,7 @@
                         <div class="card" style="width: 18rem; ">
                             <div class="card-body">
                                 <h5 class="card-title">{{item.nombre}}</h5>
-                                <img :src="item.imagen" 
+                                <img :src="item.imagen " v-on:click="counter += 1"
                             alt="" width="250">
                                 <p class="card-text">{{ item.descripcion }}</p>
                                     <div class="producto-relacionado-precio">Precio:{{item.precio}} BOB</div>

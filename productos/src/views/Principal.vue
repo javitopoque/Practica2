@@ -4,7 +4,7 @@
 <body>
     <div id="Princ">
         <Menu></Menu>
-        <Producto></Producto>
+        <Producto :ida="2"></Producto>
         <Tarjetas></Tarjetas>
         <PiePagina></PiePagina> 
         
@@ -32,7 +32,7 @@ export default {
         Producto,
         Tarjetas
         
-    }
+    },
 }
 </script>
 

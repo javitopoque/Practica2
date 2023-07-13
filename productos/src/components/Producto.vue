@@ -37,6 +37,9 @@
 <script>
 export default {
     name: 'Producto',
+    props: {
+        ida: Number,
+    },
     data() {
         const api = process.env.VUE_APP_API;
         return{
@@ -48,7 +51,8 @@ export default {
                 id: null,
                 cantidad: 0,
                 color:null
-            }
+            },
+            
 
         }
     },
@@ -57,7 +61,7 @@ export default {
         getItems() {
             this.axios({
                 method: 'get',
-                url: this.api + '/Productos/1'
+                url: this.api + '/Productos/' + this.ida
             })
                 .then((response) => {
                     this.items = response.data;
